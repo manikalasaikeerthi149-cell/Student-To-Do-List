@@ -1,0 +1,172 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    transition:.3s;
+}
+
+.container{
+    width:700px;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+.top-bar{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr auto;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.top-bar input,
+.top-bar select{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.top-bar button{
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.top-bar button:hover{
+    background:#0b5ed7;
+}
+
+.search-box input{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+ul{
+    list-style:none;
+}
+
+li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f8f9fa;
+    margin-bottom:10px;
+    padding:12px;
+    border-radius:8px;
+}
+
+.task-info{
+    flex:1;
+}
+
+.completed{
+    text-decoration:line-through;
+    color:gray;
+}
+
+.priority{
+    font-size:12px;
+    font-weight:bold;
+    margin-top:5px;
+}
+
+.high{color:red;}
+.medium{color:orange;}
+.low{color:green;}
+
+.actions button{
+    margin-left:5px;
+    padding:6px 10px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.complete{
+    background:green;
+    color:white;
+}
+
+.delete{
+    background:red;
+    color:white;
+}
+
+.buttons{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.buttons button{
+    padding:10px 15px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    background:#333;
+    color:white;
+}
+
+.dark{
+    background:#1f2937;
+    color:white;
+}
+
+.dark .container{
+    background:#374151;
+}
+
+.dark input,
+.dark select{
+    background:#4b5563;
+    color:white;
+    border:none;
+}
+
+.dark li{
+    background:#4b5563;
+}
+
+@media(max-width:768px){
+    .container{
+        width:95%;
+    }
+
+    .top-bar{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        flex-direction:column;
+        gap:8px;
+    }
+}
